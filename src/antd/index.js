@@ -4,7 +4,7 @@ class Antd extends Component {
   render () {
     return (
       <div>
-        <Button>Start</Button>
+        <Button type="primary">Start</Button>
       </div>
     )
   }
