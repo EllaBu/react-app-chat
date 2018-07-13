@@ -6,7 +6,7 @@ import { Button } from 'antd-mobile'
 import { addGun, reduceGun, addGunAsync} from "./index";
 
 @connect(
-  state => ({num: state}),
+  state => ({num: state.counter}),
   { addGun, reduceGun, addGunAsync }
 )
 
