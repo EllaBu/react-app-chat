@@ -6,9 +6,9 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { routerReducer } from 'react-router-redux'
-import './index.css';
-import App from './redux/page';
+import App from './App';
 import rootReducer from './reducers';
+import './config/index';
 import registerServiceWorker from './registerServiceWorker';
 // import 'antd-mobile/dist/antd-mobile.css';
 // 引入antd的一种方式 不推荐使用 推荐使用按需加载

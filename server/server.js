@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
   res.send('<h1>hello</h1>')
 })
 app.get('/data', function (req, res) {
-  User.find({name: 'Leo'}, function (err, doc) {
+  User.findOne({name: 'Leo'}, function (err, doc) {
     res.json(doc)
   })
 })
