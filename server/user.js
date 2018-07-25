@@ -34,6 +34,21 @@ Router.get('/list', function(req, res) {
   })
 })
 
+Router.post('/save', function (req, res) {
+  const userid = req.cookies.userid;
+  if (!userid) {
+    return json.dumps({code: 1});
+  }
+  const body = req.body
+  User.findByIdAndUpdate(userid, body, function(err, doc){
+    const data = Object.assign({}, {
+      name: doc.name,
+      type: doc.type
+    }, body)
+    return res.json({code: 0, data})
+  })
+})
+
 Router.post('/login', function(req, res) {
   console.log(req.body)
   const { name, password } =req.body

@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 import Auth from './component/auth/index'
 import Login from './container/login'
 import Register from './container/register'
+import BossInfo from './container/bossInfo/bossInfo'
+import GeniusInfo from './container/geniusInfo/geniusInfo'
 
 import './App.css'
 
@@ -16,6 +18,8 @@ class App extends Component {
     return (
       <div className="App">
         <Auth />
+        <Route path='/bossinfo' component={BossInfo} />
+        <Route path='/geniusinfo' component={GeniusInfo} />
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
         {/*<ul>*/}
